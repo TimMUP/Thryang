@@ -1,31 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Outfit&family=Source+Serif+Pro&display=swap');
+
+html {
+    font-size: 16px;
+}
+
 body {
+    display: flex;
     height: 100vh;
     width: 100%;
     margin: 0;
-    background-color: var(--dark2);
-    display: grid;
-    grid-template-columns: [first] 8em [line1] calc(100% - 8em);
-    grid-template-rows: [first] 100%;
+    background-color: var(--dark1);
+    overflow-y: hidden;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
 }
 
 .side-nav {
+    display: flex;
+    width: 12rem;
+    background-color: var(--dark1);
+    flex-direction: column;
+    justify-content: space-between;
+}
 
+#side-graphic {
+    display: flex;
+    background-color: var(--accent3);
+    padding-left: .8rem;
+    height: 4rem;
+}
+
+#side-graphic > img{
+    margin: auto 0;
+    height: 3rem;
+}
+
+#side-menu {
+
+}
+
+#side-menu > ul {
+    color: var(--light2);
+    margin: 0;
+    padding: 1rem;
+    transition: color 1s ease;
+}
+
+#side-menu > ul > a > h1 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--light2);
+    transition: color .5s ease;
+}
+
+#side-menu > ul :hover {
+    cursor: pointer;
+    color: var(--light1);
+}
+
+#side-extra {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+}
+
+#side-extra > ul {
+    padding: 0 0 1rem 1rem;
+    margin: 0;
+    width: 1.5rem;
+}
+
+#side-extra > ul > a {
+    opacity: 0.2;
+    transition: opacity .5s ease;
+}
+
+#side-extra > ul :hover {
+    cursor: pointer;
+    fill: white;
+    opacity: 1;
+}
+
+#side-extra > ul > a > img > path{
+    fill: black;
+}
+
+.top-nav {
+    display: none;
+    position: fixed;
+    padding: 1rem;
+    width: calc(100% - 2rem);
+    height: 8.2rem;
+    background-color: rgba(13, 105, 115, 0.4);
+    z-index: 10;
+    justify-content: right;
+}
+
+#top-graphic {
+    margin-right: 1rem;
+}
+
+#top-graphic > img {
+    height: 8.2rem;
 }
 
 .content {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
 
+.content-block {
+    padding: 0 5rem;
+    margin: auto;
+    background-color: var(--dark3);
+    width: calc(100% - 10rem);
+    height: 100vh;
+}
+
+.line-block {
+    background-color: var(--dark3);
+    width: calc(100% - 3rem);
+    padding: 1.5rem;
+    height: fit-content;
+    color: var(--light2);
+    box-shadow: inset 3px 0 3px -3px rgba(0,0,0,0.4);
+}
+
+.line-block h1 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 1rem;
+    margin: 0;
+}
+
+#block-intro {
+    display: flex;
+    height: calc(100vh - 8rem);
+}
+
+#intro-wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+#intro-wrapper h1 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 12rem;
+    font-weight: 600;
+    color: var(--light1);
+}
+
+#intro-wrapper h2 {
+    position: relative;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 200;
+    color: var(--light2);
+}
+
+#intro-wrapper h1 span::before {
+    content: "Y";
+    margin-right: -5.4rem;
+    background: url('resources/test.jpg');
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 
-#colors {
+#block-exper {
+    background-color: var(--accent2)
+}
+
+#block-projs {
+    
+}
+
+#block-skill {
+    
+}
+
+
+.colors {
     width: 250px;
     height: 50px;
     position: absolute;
     display: flex;
-    background-color: rgba(255, 255, 255, 0.1)
+    background-color: rgba(255, 255, 255, 0.1);
+    display: none;
 }
 
-#colors > .color-block > h1 {
+.colors > .color-block > h1 {
     margin: 0;
     font-size: 16px;
     color: white;
@@ -43,10 +219,41 @@ body {
     border-radius: 5px;
 }
 
-@media(max-width: 480px) {
-    body {
-        grid-template-columns: [first] 2em [line1] calc(100% - 2em);
-        grid-template-rows: [first] 100%;
+@media(max-width: 1000px) {
+    .side-nav {
+        display: none;
+    }
+
+    .top-nav {
+        display: flex;
+    }
+
+    #block-intro {
+        min-height: calc(100vh - 20.4em);
+        height: fit-content;
+    }
+
+    #block-intro > #intro-wrapper > .text-wrapper > h1{
+        line-height: 20rem;
+        font-size: 20rem;
+    }
+
+    #block-intro > #intro-wrapper > .text-wrapper > h1 > span::before{
+        margin-right: -9rem;
+    }
+
+    #block-intro > #intro-wrapper > .text-wrapper > h2{
+        margin: 8rem 0;
+        font-size: 4rem;
+    }
+
+    .line-block {
+        width: calc(100% - 8rem);
+        padding: 4rem;
+    }
+
+    .line-block > h1 {
+        font-size: 2.2rem;
     }
 }
 
