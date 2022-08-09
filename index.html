@@ -2,9 +2,12 @@
 <html>
     <head>
         <title>Tim Yang's Portfolio</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <link rel="icon" type="image/png" href="resources/logo.png">
         <link rel="stylesheet" href="resources/color.css">
         <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Outfit:wght@200;400;600&family=Source+Serif+Pro&display=swap" rel="stylesheet">
@@ -24,11 +27,12 @@
                 </div>
             </section>
             <section id="side-menu">
-                <ul><a><h1>.Introduction</h1></a></ul>
-                <ul><a><h1>.Experiences</h1></a></ul>
-                <ul><a><h1>.Projects</h1></a></ul>
-                <ul><a><h1>.Skill Set</h1></a></ul>
-                <ul><a><h1>.Contacts</h1></a></ul>
+                <div id="menu-pointer"></div>
+                <ul id="select-intro"><a href="#top" onclick='aniPoiner(1, true);'><h1>.Introduction</h1></a></ul>
+                <ul id="select-exper"><a href="#block-exper" onclick="aniPointer(2, true);"><h1>.Experiences</h1></a></ul>
+                <ul id="select-projs"><a href="#block-projs" onclick="aniPointer(3, true);"><h1>.Projects</h1></a></ul>
+                <ul id="select-skill"><a href="#block-skill" onclick="aniPointer(4, true);"><h1>.Skill Set</h1></a></ul>
+                <ul id="select-conts"><a href="#block-conts" onclick="aniPointer(5, true);"><h1>.Contacts</h1></a></ul>
             </section>
             <section id="side-extra">
                 <section id="side-social-wrapper">
@@ -48,7 +52,7 @@
                 <img src="resources/logo.png">
             </section>
         </section>
-        <section class="content">
+        <section class="content" id="top">
             <section class="line-block"><h1>> Print("Hello There!")</h1></section>
             <section class="content-block" id="block-intro">
                 <div id="intro-wrapper">
@@ -60,8 +64,10 @@
                 </div>
             </section>
             <section class="line-block" style="text-align: center;"><h1 style="color: var(--accent1)">&#60body&#62</h1></section>
-            <section class="content-block" id="block-exper">Past Experiences</section>
-            <section class="content-block" id="block-skill">Sec3</section>
+            <section class="content-block" id="block-exper"></section>
+            <section class="content-block" id="block-projs"></section>
+            <section class="content-block" id="block-skill"></section>
+            <section class="content-block" id="block-conts"></section>
             <section class="line-block" style="text-align: center;"><h1 style="color: var(--accent1)">&#60/body&#62</h1></section>
             <section class="line-block" style="text-align: right;"><h1>Print("General Kenobi!") &#60</h1></section>
         </section>
