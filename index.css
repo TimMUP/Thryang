@@ -2,6 +2,11 @@
 
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
 }
 
 body {
@@ -10,6 +15,7 @@ body {
     width: 100%;
     margin: 0;
     background-color: var(--dark1);
+    overflow-y: auto;
 }
 
 h1 {
@@ -21,7 +27,7 @@ h2 {
 }
 
 .side-nav {
-    position: static;
+    position: fixed;
     display: flex;
     width: 12rem;
     background-color: var(--dark1);
@@ -77,11 +83,25 @@ h2 {
 
 }
 
+#menu-pointer {
+    position: absolute;
+    height: .5rem;
+    width: .5rem;
+    border-radius: 0.25rem;
+    background-color: var(--accent2);
+    padding: 0;
+    margin: 0;
+    display: none;
+    z-index: 1;
+    pointer-events: none;
+}
+
 #side-menu > ul {
     color: var(--light2);
     margin: 0;
     padding: 1rem .9rem;
     transition: color 1s ease;
+    z-index: 2;
 }
 
 #side-menu > ul > a > h1 {
@@ -177,9 +197,8 @@ h2 {
 
 .content {
     top: 0;
-    width: calc(100vw - 12rem);
+    width: calc(100% - 12rem);
     height: 100%;
-    overflow-y: auto;
     position: absolute;
     margin-left: 12rem;
 }
@@ -243,15 +262,19 @@ h2 {
 
 
 #block-exper {
-    background-color: var(--accent2)
+    background-color: var(--dark2)
 }
 
 #block-projs {
-    
+    background-color: var(--accent2)
 }
 
 #block-skill {
-    
+    background-color: var(--accent3)
+}
+
+#block-conts {
+    background-color: var(--accent4)
 }
 
 
