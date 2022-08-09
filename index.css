@@ -5,12 +5,11 @@ html {
 }
 
 body {
-    display: flex;
+    display: block;
     height: 100vh;
     width: 100%;
     margin: 0;
     background-color: var(--dark1);
-    overflow-y: hidden;
 }
 
 h1 {
@@ -22,23 +21,56 @@ h2 {
 }
 
 .side-nav {
+    position: static;
     display: flex;
     width: 12rem;
     background-color: var(--dark1);
     flex-direction: column;
     justify-content: space-between;
+    height: 100vh;
 }
 
 #side-graphic {
     display: flex;
-    background-color: var(--accent3);
-    padding-left: .8rem;
-    height: 4rem;
+    flex-direction: column;
+    height: fit-content;
 }
 
-#side-graphic > img{
+#side-graphic > a :hover {
+    background-color: var(--accent1);
+}
+
+#graphic-wrapper {
+    display: flex;
+    background-color: var(--accent3);
+    padding-left: .6rem;
+    width: calc(100% - .6rem);
+    height: 4rem;
+    transition: background-color .5s ease;
+}
+
+#graphic-wrapper > img{
+    background: transparent !important;
     margin: auto 0;
     height: 3rem;
+    width: 3rem;
+}
+
+#profession-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-left: .9rem;
+    padding-top: 1rem;
+}
+
+#profession-wrapper > ul {
+    font-family: 'Outfit', serif;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: .1rem;
+    padding: .5rem 0;
+    margin: 0;
+    color: var(--light1);
 }
 
 #side-menu {
@@ -48,7 +80,7 @@ h2 {
 #side-menu > ul {
     color: var(--light2);
     margin: 0;
-    padding: 1rem;
+    padding: 1rem .9rem;
     transition: color 1s ease;
 }
 
@@ -68,31 +100,60 @@ h2 {
 
 #side-extra {
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+}
+
+#side-social-wrapper {
+    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
     height: fit-content;
 }
 
-#side-extra > ul {
+#side-social-wrapper > ul {
     padding: 0 0 1rem 1rem;
     margin: 0;
     width: 1.5rem;
 }
 
-#side-extra > ul > a {
+#side-social-wrapper > ul > a {
     opacity: 0.2;
     transition: opacity .5s ease;
 }
 
-#side-extra > ul :hover {
+#side-social-wrapper > ul :hover {
     cursor: pointer;
     fill: white;
     opacity: 1;
 }
 
-#side-extra > ul > a > img > path{
+#side-social-wrapper > ul > a > img > path{
     fill: black;
+}
+
+#side-contact-wrapper {
+    border-top: 1px dashed var(--light2);
+    margin: 0 1rem 1rem 1rem;
+    width: calc(100% - 2rem);
+    padding-top: 1rem;
+}
+
+#side-contact-wrapper h1 {
+    font-family: 'Outfit', serif;
+    font-weight: 100;
+    font-size: 1rem;
+    color: var(--light1)
+}
+
+#side-contact-wrapper h2 {
+    font-family: 'Outfit', serif;
+    font-weight: 100;
+    font-size: .5rem;
+    color: var(--light1);
+    width: 100%;
 }
 
 .top-nav {
@@ -115,9 +176,12 @@ h2 {
 }
 
 .content {
-    width: 100%;
+    top: 0;
+    width: calc(100vw - 12rem);
     height: 100%;
     overflow-y: auto;
+    position: absolute;
+    margin-left: 12rem;
 }
 
 .content-block {
@@ -134,7 +198,6 @@ h2 {
     padding: 1.5rem;
     height: fit-content;
     color: var(--light2);
-    box-shadow: inset 3px 0 3px -3px rgba(0,0,0,0.4);
 }
 
 .line-block h1 {
@@ -226,6 +289,12 @@ h2 {
 
     .top-nav {
         display: flex;
+    }
+
+    .content {
+        padding: 0;
+        margin: 0;
+        width: 100vw;
     }
 
     #block-intro {
