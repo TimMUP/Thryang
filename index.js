@@ -14,26 +14,31 @@ $( document ).ready( function() {
     //     easing: 'easeInQuad',
     // });
     const introButton = document.getElementById('select-intro').getBoundingClientRect();
-    var introTopPos = $( '#block-intro' ).offset().top - 1
+    var introTopPos = $( '#block-intro' ).offset().top - convertRemToPixels(1)
     const experButton = document.getElementById('select-exper').getBoundingClientRect();
-    var experTopPos = $('#block-exper').offset().top - 1
+    var experTopPos = $('#block-exper').offset().top - convertRemToPixels(1)
     const projsButton = document.getElementById('select-projs').getBoundingClientRect();
-    var projsTopPos = $('#block-projs').offset().top - 1
+    var projsTopPos = $('#block-projs').offset().top - convertRemToPixels(1)
     const skillButton = document.getElementById('select-skill').getBoundingClientRect();
-    var skillTopPos = $('#block-skill').offset().top - 1
+    var skillTopPos = $('#block-skill').offset().top - convertRemToPixels(1)
     const contsButton = document.getElementById('select-conts').getBoundingClientRect();
-    var contsTopPos = $('#block-conts').offset().top - 1
-    $( "#menu-pointer" ).css({'display': 'block', 'left': `${introButton.right - convertRemToPixels(2)}px`, 'top': `${introButton.top + convertRemToPixels(1.4)}px`})
+    var contsTopPos = $('#block-conts').offset().top - convertRemToPixels(1)
+    const pointerTopVar = convertRemToPixels(1.2);
+    const pointerRigVar = convertRemToPixels(2);
+    $( "#menu-pointer" ).css({'display': 'block', 'left': `${introButton.right - pointerRigVar}px`, 'top': `${introButton.top + pointerTopVar}px`})
     function aniPointer(pos, clicked) {
         disableScrollSense = clicked;
+        if (pointerDesPos == pos) {
+            return;
+        };
         console.log(disableScrollSense)
         if (pos == 1) {
             console.log('Animating to 1');
             pointerDesPos = 1;
             anime({
                 targets: '#menu-pointer',
-                top: introButton.top + convertRemToPixels(1.4),
-                left: introButton.right - convertRemToPixels(2),
+                top: introButton.top + pointerTopVar,
+                left: introButton.right - pointerRigVar,
                 loop: false,
                 duration: 500,
                 easing: 'easeInCubic',
@@ -48,8 +53,8 @@ $( document ).ready( function() {
             pointerDesPos = 2;
             anime({
                 targets: '#menu-pointer',
-                top: experButton.top + convertRemToPixels(1.4),
-                left: experButton.right - convertRemToPixels(2),
+                top: experButton.top + pointerTopVar,
+                left: experButton.right - pointerRigVar,
                 loop: false,
                 duration: 500,
                 easing: 'easeInCubic',
@@ -64,8 +69,8 @@ $( document ).ready( function() {
             pointerDesPos = 3;
             anime({
                 targets: '#menu-pointer',
-                top: projsButton.top + convertRemToPixels(1.4),
-                left: projsButton.right - convertRemToPixels(2),
+                top: projsButton.top + pointerTopVar,
+                left: projsButton.right - pointerRigVar,
                 loop: false,
                 duration: 500,
                 easing: 'easeInCubic',
@@ -80,8 +85,8 @@ $( document ).ready( function() {
             pointerDesPos = 4;
             anime({
                 targets: '#menu-pointer',
-                top: skillButton.top + convertRemToPixels(1.4),
-                left: skillButton.right - convertRemToPixels(2),
+                top: skillButton.top + pointerTopVar,
+                left: skillButton.right - pointerRigVar,
                 loop: false,
                 duration: 500,
                 easing: 'easeInCubic',
@@ -96,8 +101,8 @@ $( document ).ready( function() {
             pointerDesPos = 5;
             anime({
                 targets: '#menu-pointer',
-                top: contsButton.top + convertRemToPixels(1.4),
-                left: contsButton.right - convertRemToPixels(2),
+                top: contsButton.top + pointerTopVar,
+                left: contsButton.right - pointerRigVar,
                 loop: false,
                 duration: 500,
                 easing: 'easeInCubic',
@@ -119,20 +124,21 @@ $( document ).ready( function() {
     $( '#select-conts' ).click(function() {aniPointer(5, true)});
 
     $( window ).scroll(function() {
+        scrollPos = $( window ).scrollTop() + $( window ).innerHeight()/2;
         if (disableScrollSense == false) {
-            if ( $( window ).scrollTop() <= introTopPos & (Math.min(pointerCurPos, pointerDesPos) > 1 | 1 > Math.max(pointerCurPos, pointerDesPos))) {
+            if ( scrollPos <= introTopPos + $( window ).innerHeight()/2 & (Math.min(pointerCurPos, pointerDesPos) > 1 | 1 > Math.max(pointerCurPos, pointerDesPos))) {
                 aniPointer(1, false);
             }
-            if ( $( window ).scrollTop() >= experTopPos & $( window ).scrollTop() < projsTopPos & (Math.min(pointerCurPos, pointerDesPos) > 2 | 2 > Math.max(pointerCurPos, pointerDesPos))) {
+            if ( scrollPos >= experTopPos & scrollPos < projsTopPos & (Math.min(pointerCurPos, pointerDesPos) > 2 | 2 > Math.max(pointerCurPos, pointerDesPos))) {
                 aniPointer(2, false);
             }   
-            if ( $( window ).scrollTop() >= projsTopPos & $( window ).scrollTop() < skillTopPos & (Math.min(pointerCurPos, pointerDesPos) > 3 | 3 > Math.max(pointerCurPos, pointerDesPos))) {
+            if ( scrollPos >= projsTopPos & scrollPos < skillTopPos & (Math.min(pointerCurPos, pointerDesPos) > 3 | 3 > Math.max(pointerCurPos, pointerDesPos))) {
                 aniPointer(3, false);
             }   
-            if ( $( window ).scrollTop() >= skillTopPos & $( window ).scrollTop() < contsTopPos & (Math.min(pointerCurPos, pointerDesPos) > 4 | 4 > Math.max(pointerCurPos, pointerDesPos))) {
+            if ( scrollPos >= skillTopPos & scrollPos < contsTopPos & (Math.min(pointerCurPos, pointerDesPos) > 4 | 4 > Math.max(pointerCurPos, pointerDesPos))) {
                 aniPointer(4, false);
             }  
-            if ( $( window ).scrollTop() >= contsTopPos & (Math.min(pointerCurPos, pointerDesPos) > 5 | 5 > Math.max(pointerCurPos, pointerDesPos))) {
+            if ( scrollPos >= contsTopPos & (Math.min(pointerCurPos, pointerDesPos) > 5 | 5 > Math.max(pointerCurPos, pointerDesPos))) {
                 aniPointer(5, false);
             }  
         };

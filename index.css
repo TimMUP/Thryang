@@ -85,9 +85,9 @@ h2 {
 
 #menu-pointer {
     position: absolute;
-    height: .5rem;
-    width: .5rem;
-    border-radius: 0.25rem;
+    height: .4rem;
+    width: .4rem;
+    border-radius: 0.2rem;
     background-color: var(--accent2);
     padding: 0;
     margin: 0;
@@ -99,7 +99,7 @@ h2 {
 #side-menu > ul {
     color: var(--light2);
     margin: 0;
-    padding: 1rem .9rem;
+    padding: 1rem 1rem;
     transition: color 1s ease;
     z-index: 2;
 }
@@ -108,6 +108,7 @@ h2 {
     font-family: 'Outfit', sans-serif;
     font-weight: 400;
     font-size: 1rem;
+    line-height: 1rem;
     cursor: pointer;
     color: var(--light2);
     transition: color .5s ease;
@@ -262,19 +263,47 @@ h2 {
 
 
 #block-exper {
-    background-color: var(--dark2)
+    display: flex;
 }
 
+#block-exper > div {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+}
+
+#block-exper > div > h1 {
+    font-family: 'Outfit', serif;
+    font-size: 10rem;
+    color: var(--dark1);
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: 10%;
+}
+
+.exper-entity-wrapper {
+    
+}
+
+
+.exper-entity-wrapper > ul {
+    border: 1px solid red;
+    display: flex;
+    width: 100%;
+}
+
+
 #block-projs {
-    background-color: var(--accent2)
+    background-color: var(--dark3)
 }
 
 #block-skill {
-    background-color: var(--accent3)
+    background-color: var(--dark2)
 }
 
 #block-conts {
-    background-color: var(--accent4)
+    background-color: var(--dark3)
 }
 
 
