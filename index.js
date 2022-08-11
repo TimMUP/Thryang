@@ -6,6 +6,8 @@ $(document).ready(function () {
 
     // Scroll Reveal Section:
     ScrollReveal().reveal('.exper-entity', { delay: 250, duration: 500 });
+    GitHubCalendar(".github-calendar", "TimMUP", { responsive: true, summary_text: false, global_stats: false});
+
 
     function convertRemToPixels(rem) { return rem * parseFloat(getComputedStyle(document.documentElement).fontSize) };
     console.log("Hello There! Welcome to Tim's console!");

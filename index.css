@@ -268,6 +268,51 @@ h3 {
 
 #block-exper {
     display: flex;
+    height: fit-content;
+
+}
+
+rect.ContributionCalendar-day[data-level='0'] {
+    fill: var(--color-calendar-graph-day-bg);
+}
+
+rect.ContributionCalendar-day[data-level='1'] {
+    fill: var(--color-calendar-graph-day-L1-bg);
+}
+
+rect.ContributionCalendar-day[data-level='2'] {
+    fill: var(--color-calendar-graph-day-L2-bg);
+}
+
+rect.ContributionCalendar-day[data-level='3'] {
+    fill: var(--color-calendar-graph-day-L3-bg);
+}
+
+rect.ContributionCalendar-day[data-level='4'] {
+    fill: var(--color-calendar-graph-day-L4-bg);
+}
+
+.github-calendar {
+    width: 50%;
+    font-family: "Outfit", serif;
+    font-size: 1rem;
+    color: var(--accent1);
+    border-radius: 3px;
+    min-height: fit-content !important;
+    text-align: left;
+}
+
+.js-calendar-graph-svg text {
+    display: none;
+}
+
+.github-calendar .float-left {
+    display: none;
+}
+
+.github-calendar .float-right {
+    color: var(--light2);
+    padding-left: 1.8rem;
 }
 
 #block-exper > div {
@@ -279,7 +324,7 @@ h3 {
 
 #block-exper > div > h1 {
     font-family: 'Outfit', serif;
-    font-weight: 200;
+    font-weight: 600;
     font-size: 10rem;
     color: var(--dark1);
     overflow: hidden;
@@ -345,15 +390,39 @@ h3 {
     
 }
 
-.exper-content > {
-
-}
-
 .exper-time {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    position: relative;
+    padding-right: 2rem;
 }
+
+.exper-time::before {
+    content: "";
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    opacity: 0.05;
+}
+
+#exper-curaml > .exper-time::before {
+    background-image: url(resources/logos/curaml.svg);
+}
+
+#exper-abbott > .exper-time::before {
+    background-image: url(resources/logos/abbott.svg);
+}
+
+#exper-huawei > .exper-time::before {
+    background-image: url(resources/logos/huawei.svg);
+}
+
 
 #block-projs {
     background-color: var(--dark3)
@@ -474,6 +543,10 @@ h3 {
     .exper-entity h4 {
         font-size: 2rem;
         margin: 1rem 0;
+    }
+
+    #exper-github {
+        display: none;
     }
 }
 
