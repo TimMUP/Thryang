@@ -464,7 +464,7 @@ rect.ContributionCalendar-day[data-level='4'] {
     border-radius: 5px;
 }
 
-@media(max-width: 1400px) {
+@media(max-width: 1600px) {
     html {
         font-size: 12px;
     }
