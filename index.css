@@ -26,6 +26,10 @@ h2 {
     margin: 0;
 }
 
+h3 {
+    margin: 0;
+}
+
 .side-nav {
     position: fixed;
     display: flex;
@@ -105,7 +109,7 @@ h2 {
 }
 
 #side-menu > ul > a > h1 {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Outfit', serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 1rem;
@@ -275,24 +279,81 @@ h2 {
 
 #block-exper > div > h1 {
     font-family: 'Outfit', serif;
+    font-weight: 200;
     font-size: 10rem;
     color: var(--dark1);
     overflow: hidden;
     white-space: nowrap;
-    margin-left: 10%;
 }
 
 .exper-entity-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.exper-entity {
+    display: flex;
+    width: calc(100% - 10rem - 10rem);
+    height: fit-content;
+    margin: 2rem 5rem 2rem 10rem;
+    padding: 1rem;
+    justify-content: space-between;
+    border: 0.15rem solid;
+    border-image: radial-gradient(circle, rgba(242,242,242,1) 0%, rgba(89,89,89,0) 100%);
+    transition: background-color .25s ease-in;
+}
+
+.exper-entity:hover {
+    background-color: var(--dark1);
+    cursor: pointer;
+    transition: background-color .25s ease-out;
+}
+
+.exper-entity:hover .exper-time h4 {
+    letter-spacing: .05rem;
+}
+
+.exper-entity h1 {
+    font-family: 'Outfit', serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--light1);
+    transition: letter-spacing .25s ease;
+}
+
+.exper-entity h2 {
+    font-family: 'Outfit', serif;
+    font-size: 1rem;
+    font-weight: 200;
+    color: var(--accent2);
+}
+
+.exper-entity h3 {
+    font-family: 'Outfit', serif;
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: var(--light2);
+}
+
+.exper-entity h4 {
+    font-family: 'Major Mono Display', monospace;
+    color: var(--light2);
+    transition: letter-spacing .25s ease;
+}
+
+.exper-content {
     
 }
 
+.exper-content > {
 
-.exper-entity-wrapper > ul {
-    border: 1px solid red;
-    display: flex;
-    width: 100%;
 }
 
+.exper-time {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 
 #block-projs {
     background-color: var(--dark3)
@@ -346,7 +407,7 @@ h2 {
     .content {
         padding: 0;
         margin: 0;
-        width: 100vw;
+        width: 100%;
     }
 
     #block-intro {
@@ -375,6 +436,44 @@ h2 {
 
     .line-block > h1 {
         font-size: 2.2rem;
+    }
+
+    #block-exper > div > h1 {
+        font-weight: 200;
+        font-size: 8rem;
+        margin-bottom: 5rem;
+        color: var(--dark1);
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .exper-entity-wrapper {
+        gap: 5rem;
+    }
+
+    .exper-entity {
+        margin: 0;
+        width: 100%;
+        flex-direction: column;
+        border: none;
+    }
+
+    .exper-entity h1 {
+        font-size: 5rem;
+    }
+
+    .exper-entity h2 {
+        font-size: 2.5rem;
+    }
+
+    .exper-entity h3 {
+        font-size: 2rem;
+        display: none;
+    }
+
+    .exper-entity h4 {
+        font-size: 2rem;
+        margin: 1rem 0;
     }
 }
 
