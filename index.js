@@ -5,7 +5,7 @@ var disableScrollSense = false;
 $(document).ready(function () {
 
     // Scroll Reveal Section:
-    ScrollReveal().reveal('.exper-entity', { delay: 250, duration: 500 });
+    ScrollReveal().reveal('.exper-entity', { distance: '3rem', origin: 'right', delay: 250, duration: 1000 });
     GitHubCalendar(".github-calendar", "TimMUP", { responsive: true, summary_text: false, global_stats: false});
 
 
