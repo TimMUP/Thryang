@@ -6,23 +6,24 @@ $(document).ready(function () {
 
     // Scroll Reveal Section:
     ScrollReveal().reveal('.exper-entity', { distance: '3rem', origin: 'right', delay: 100, duration: 1000, interval: 50 });
+    ScrollReveal().reveal('.proj-entity', { distance: '2rem', origin: 'bottom', delay: 100, duration: 1000, interval: 50 });
 
     // Scroll Magic Section:
     var SMControl = new ScrollMagic.Controller()
     var experSM = new ScrollMagic.Scene({
         triggerElement: '#block-exper',
-        duration: "100%",
+        duration: $( '#block-exper' ).height(),
     }) 
     .setClassToggle('#block-exper > div > h1', 'content-block-inview')
-    //.addIndicators() // remove this before publishing
+    .addIndicators() // remove this before publishing
     .addTo(SMControl);
 
     var projsSM = new ScrollMagic.Scene({
         triggerElement: '#block-projs',
-        duration: "100%",
+        duration: $( '#block-projs' ).height(),
     }) 
     .setClassToggle('#block-projs > div > h1', 'content-block-inview')
-    //.addIndicators() // remove this before publishing
+    .addIndicators() // remove this before publishing
     .addTo(SMControl);
 
 

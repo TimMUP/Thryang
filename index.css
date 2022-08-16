@@ -389,37 +389,74 @@ h3 {
     color: var(--accent3) !important;
 }
 
-#proj-wrapper {
-    display: inline-block;
-    flex-direction: row;
-    position: relative;
-    width: calc(100% - 2rem);
+#proj-entity-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     height: fit-content;
-    padding: 1rem;
-    overflow-y: hidden;
-    overflow-x: auto;
-    white-space: nowrap;
-}
-
-#proj-wrapper::-webkit-scrollbar {
-    width: 1px;
 }
 
 .proj-entity {
     display: inline-block;
-    height: 100%;
-    width: 15rem;
+    height: fit-content;
+    width: calc(100% - 18rem);
+    margin: 2rem 5rem 2rem 10rem;
 }
 
-.proj-entity > img {
-    width: 10rem;
+.proj-entity:hover {
+    cursor: pointer;
+}
+
+.proj-entity:hover .proj-img {
+    opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+}
+
+.proj-wrapper {
+    width: 100%;
     height: 10rem;
-    background-color: white;
-    transition: transform 1s ease;
+    text-align: right;
 }
 
-.proj-entity > img:hover {
-    transform: scale(0.5);
+.proj-img {
+    position: absolute;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    background-image: url(resources/images/placeholder-proj.png);
+    z-index: 1;
+    transition: all .5s ease;
+    transition-property: opacity, clip-path;
+    clip-path: polygon(0 0, 55% 0, 50% 100%, 0 100%)
+}
+
+.proj-desc {
+    font-family: 'Outfit', serif;
+    width: calc(100% - 3rem);
+    height: calc(100% - 2rem);
+    text-align: right;
+    padding: 1rem 2rem 1rem 1rem;
+}
+
+.proj-desc > h1 {
+    position: relative;
+    color: var(--light1);
+    font-size: 4rem;
+    font-weight: 400;
+    z-index: 3;
+}
+
+.proj-desc > h2 {
+    position: relative;
+    color: var(--light2);
+    font-size: 2rem;
+    font-weight: 200;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.proj-entity {
+    
 }
 
 #block-skill {
