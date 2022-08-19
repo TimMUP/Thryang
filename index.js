@@ -4,11 +4,17 @@ var disableScrollSense = false;
 
 $(document).ready(function () {
 
+    // Easter Egg?
+    console.log("Hello There! Welcome to Tim's console!");
+
+    // Helper Function (Translates Rem Unit into Pixels):
+    function convertRemToPixels(rem) { return rem * parseFloat(getComputedStyle(document.documentElement).fontSize) };
+
     // Scroll Reveal Section:
     ScrollReveal().reveal('.exper-entity', { distance: '3rem', origin: 'right', delay: 100, duration: 1000, interval: 50 });
     ScrollReveal().reveal('.proj-entity', { distance: '2rem', origin: 'bottom', delay: 100, duration: 1000, interval: 50 });
 
-    // Scroll Magic Section:
+    // Scroll Magic Reveal Experiences:
     var SMControl = new ScrollMagic.Controller()
     var experSM = new ScrollMagic.Scene({
         triggerElement: '#block-exper',
@@ -18,6 +24,7 @@ $(document).ready(function () {
     .addIndicators() // remove this before publishing
     .addTo(SMControl);
 
+    // Scroll Magic Reveal Projects:
     var projsSM = new ScrollMagic.Scene({
         triggerElement: '#block-projs',
         duration: $( '#block-projs' ).height(),
@@ -26,17 +33,9 @@ $(document).ready(function () {
     .addIndicators() // remove this before publishing
     .addTo(SMControl);
 
+    $( '' )
 
-    function convertRemToPixels(rem) { return rem * parseFloat(getComputedStyle(document.documentElement).fontSize) };
-    console.log("Hello There! Welcome to Tim's console!");
-    // anime({
-    //     targets: '#menu-pointer',
-    //     top: defaultPos.top,
-    //     left: defaultPos.right - 40,
-    //     loop: false,
-    //     duration: 100,
-    //     easing: 'easeInQuad',
-    // });
+    // Side Menu Dot Animations:
     const introButton = document.getElementById('select-intro').getBoundingClientRect();
     var introTopPos = $('#block-intro').offset().top - convertRemToPixels(1)
     const experButton = document.getElementById('select-exper').getBoundingClientRect();
