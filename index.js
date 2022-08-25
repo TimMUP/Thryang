@@ -12,7 +12,9 @@ $(document).ready(function () {
 
     // Scroll Reveal Section:
     ScrollReveal().reveal('.exper-entity', { distance: '3rem', origin: 'right', delay: 100, duration: 1000, interval: 50 });
-    ScrollReveal().reveal('.proj-entity', { distance: '2rem', origin: 'bottom', delay: 100, duration: 1000, interval: 50 });
+    ScrollReveal().reveal('.proj-entity', { distance: '3rem', origin: 'bottom', delay: 100, duration: 1000, interval: 50 });
+    ScrollReveal().reveal('#top-subtitle', { distance: '2rem', origin: 'left', delay: 100, duration: 1000, interval: 50 });
+    ScrollReveal().reveal('#bottom-subtitle', { distance: '2rem', origin: 'right', delay: 50, duration: 1250, interval: 50 });
 
     // Scroll Magic Reveal Experiences:
     var SMControl = new ScrollMagic.Controller()
@@ -33,7 +35,14 @@ $(document).ready(function () {
     .addIndicators() // remove this before publishing
     .addTo(SMControl);
 
-    $( '' )
+    // Scroll Magic Reveal Projects:
+    var projsSM = new ScrollMagic.Scene({
+        triggerElement: '#block-skill',
+        duration: $( '#block-skill' ).height(),
+    }) 
+    .setClassToggle('#block-skill > div > h1', 'content-block-inview')
+    .addIndicators() // remove this before publishing
+    .addTo(SMControl);
 
     // Side Menu Dot Animations:
     const introButton = document.getElementById('select-intro').getBoundingClientRect();

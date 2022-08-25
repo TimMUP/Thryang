@@ -73,7 +73,7 @@ h3 {
     padding-top: 1rem;
 }
 
-#profession-wrapper > ul {
+#profession-wrapper > h1 {
     font-family: 'Outfit', serif;
     font-size: 1rem;
     font-weight: 100;
@@ -211,7 +211,7 @@ h3 {
 .content-block {
     margin: auto;
     width: calc(100% - 10rem);
-    min-height: 50vh;
+    min-height: 80vh;
     height: fit-content;
 }
 
@@ -276,7 +276,6 @@ h3 {
 
 #block-exper {
     display: flex;
-    height: fit-content;
 }
 
 .content-block > div > h1 {
@@ -381,7 +380,7 @@ h3 {
     display: flex;
 }
 
-#block-projs > div{
+#block-projs > div {
     margin: auto;
 }
 
@@ -391,16 +390,18 @@ h3 {
 
 #proj-entity-wrapper {
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    flex-direction: row;
+    width: calc(100% - 19rem);
     height: fit-content;
+    justify-content: space-between;
+    margin: 2rem 5rem 2rem 10rem;
+    padding: 1rem;
 }
 
 .proj-entity {
     display: inline-block;
     height: fit-content;
-    width: calc(100% - 18rem);
-    margin: 2rem 5rem 2rem 10rem;
+    width: 20rem;
 }
 
 .proj-entity:hover {
@@ -408,8 +409,8 @@ h3 {
 }
 
 .proj-entity:hover .proj-img {
-    opacity: 0.8;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+    opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%);
 }
 
 .proj-entity:hover .proj-desc > h2 {
@@ -419,53 +420,62 @@ h3 {
 
 .proj-wrapper {
     width: 100%;
-    height: 10rem;
+    height: fit-content;
     text-align: right;
 }
 
 .proj-img {
-    position: absolute;
+    position: relative;
     opacity: 0.5;
-    width: 100%;
-    height: 100%;
+    width: 20rem;
+    height: 20rem;
     background-image: url(resources/images/placeholder-proj.png) var(--accent1);
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1;
     transition: all .5s ease;
-    transition-property: opacity, clip-path;
-    clip-path: polygon(0 0, 55% 0, 50% 100%, 0 100%);
+    transition-property: opacity, clip-path, transform;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 80% 100%, 0 100%);
+    transform: scale(0.95);
 }
 
 .proj-desc {
     font-family: 'Outfit', serif;
-    width: calc(100% - 3rem);
-    height: calc(100% - 2rem);
+    width: calc(100% - 1rem);
+    height: calc(100% - 1rem);
     text-align: right;
-    padding: 1rem 2rem 1rem 1rem;
+    padding: .5rem;
 }
 
 .proj-desc > h1 {
     position: relative;
     color: var(--light1);
-    font-size: 4rem;
-    font-weight: 400;
+    font-size: 3.8rem;
+    font-weight: 600;
     z-index: 3;
 }
 
 .proj-desc > h2 {
     position: relative;
     color: var(--light2);
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 200;
     overflow: hidden;
     z-index: 3;
     transition: color 1s ease;
 }
 
-.proj-entity {
-    
+.proj-desc > h3 {
+    font-family: 'Major Mono Display', monospace;
+    margin-top: 1rem;
+    position: relative;
+    color: var(--accent2);
+    font-size: 1.2rem;
+    overflow: hidden;
+    z-index: 3;
+    opacity: 0.5;
 }
+
 
 #block-skill {
     background-color: var(--dark2)
@@ -473,6 +483,33 @@ h3 {
 
 #block-conts {
     background-color: var(--dark3)
+}
+
+#skill-entity-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 19rem);
+    height: fit-content;
+    justify-content: space-between;
+    margin: 2rem 5rem 2rem 10rem;
+    padding: 1rem;
+}
+
+.skill-entity > ul {
+    list-style: none;
+}
+
+.skill-entity > ul > li {
+    font-family: 'Outfit', serif;
+    font-size: 2rem;
+    color: var(--light3);
+}
+
+.skill-entity > h1 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 3.5rem;
+    color: var(--accent1);
+    opacity: 0.6;
 }
 
 
