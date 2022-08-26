@@ -210,9 +210,10 @@ h3 {
 
 .content-block {
     margin: auto;
+    margin: 10rem auto;
     width: calc(100% - 10rem);
-    min-height: 80vh;
     height: fit-content;
+    overflow: hidden;
 }
 
 .content-block > div {
@@ -241,6 +242,7 @@ h3 {
     min-height: calc(100vh - 8rem);
     width: fit-content;
     height: calc(100vh - 8rem);
+    margin: 0 auto;
 }
 
 #intro-wrapper {
@@ -481,35 +483,44 @@ h3 {
     background-color: var(--dark2)
 }
 
-#block-conts {
-    background-color: var(--dark3)
-}
-
 #skill-entity-wrapper {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: calc(100% - 19rem);
     height: fit-content;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 2rem 5rem 2rem 10rem;
     padding: 1rem;
 }
 
-.skill-entity > ul {
-    list-style: none;
+.skill-entity {
+    width: fit-content;
+    text-align: center;
+    padding: 2rem 1rem;
 }
 
-.skill-entity > ul > li {
+.skill-title {
+    display: block;
+}
+
+.skill-title > h1 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    color: var(--accent1);
+    opacity: 0.6;
+}
+
+.skill-list > h2 {
     font-family: 'Outfit', serif;
     font-size: 2rem;
+    font-weight: 200;
     color: var(--light3);
 }
 
-.skill-entity > h1 {
-    font-family: 'Major Mono Display', monospace;
-    font-size: 3.5rem;
-    color: var(--accent1);
-    opacity: 0.6;
+#block-conts {
+    background-color: var(--dark3)
 }
 
 
@@ -568,6 +579,8 @@ h3 {
     #block-intro {
         min-height: calc(100vh - 20.4em);
         height: fit-content;
+        text-align: center;
+        padding: 0 5rem;
     }
 
     #block-intro > #intro-wrapper > .text-wrapper > h1{
@@ -632,6 +645,76 @@ h3 {
 
     #exper-github {
         display: none;
+    }
+
+    #proj-entity-wrapper {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        gap: 8rem;
+    }
+
+    .proj-entity {
+        width: 100%;
+        text-align: left;
+        padding-bottom: 2rem;
+        border-bottom: .5rem dashed var(--light2);
+    }
+
+    .proj-desc {
+        text-align: left;
+    }
+
+    .proj-desc > h1 {
+        font-size: 8rem;
+        font-weight: 400;
+    }
+
+    .proj-desc > h2 {
+        font-size: 4rem;
+    }
+
+    .proj-desc > h3 {
+        display: block;
+        font-size: 2rem;
+        text-align: right;
+    }
+
+
+    .proj-img {
+        width: 100%;
+        transform: scale(0.98);
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8rem), calc(100% - 8rem) 100%, 0 100%);
+        margin-bottom: 2rem;
+    }
+
+    #skill-entity-wrapper {
+        flex-direction: column;
+    }
+
+    #skill-entity-wrapper {
+        flex-direction: column;
+        justify-content: left;
+        margin: 0;
+        width: 100%;
+    }
+
+    .skill-entity {
+        padding: 2rem 0;
+        width: 100%;
+    }
+
+    .skill-title > h1 {
+        text-align: left;
+        font-size: 6rem;
+        line-height: 8rem;
+        white-space: wrap;
+    }
+    
+    .skill-list > h2 {
+        text-align: left;
+        font-size: 4rem;
     }
 }
 
