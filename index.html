@@ -1,197 +1,228 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <title>Tim Yang's Portfolio</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <link rel="icon" type="image/png" href="resources/logo.png">
-        <link rel="stylesheet" href="resources/color.css">
-        <link rel="stylesheet" href="index.css">
-        <script src="index.js"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Outfit:wght@200;400;600&family=Source+Serif+Pro&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <section class="side-nav">
-            <section id="side-graphic">
-                <a href="/">
-                    <div id="graphic-wrapper">
-                        <img src="resources/logo.png">
-                    </div>
-                </a>
-                <div id="profession-wrapper">
-                    <h1>Full-Stack Dev.</h1>
-                    <h1>Data Analyst.</h1>
-                    <h1>Software Eng.</h1>
+
+<head>
+    <title>Tim Yang's Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="icon" type="image/png" href="resources/logo.png">
+    <link rel="stylesheet" href="resources/color.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Outfit:wght@200;400;600&family=Source+Serif+Pro&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section class="side-nav">
+        <section id="side-graphic">
+            <a href="/">
+                <div id="graphic-wrapper">
+                    <img src="resources/logo.png">
                 </div>
+            </a>
+            <div id="profession-wrapper">
+                <h1>Full-Stack Dev.</h1>
+                <h1>Data Analyst.</h1>
+                <h1>Software Eng.</h1>
+            </div>
+        </section>
+        <section id="side-menu">
+            <div id="menu-pointer"></div>
+            <ul id="select-intro"><a href="#top">
+                    <h1>.Introduction</h1>
+                </a></ul>
+            <ul id="select-exper"><a href="#block-exper">
+                    <h1>.Experiences</h1>
+                </a></ul>
+            <ul id="select-projs"><a href="#block-projs">
+                    <h1>.Projects</h1>
+                </a></ul>
+            <ul id="select-skill"><a href="#block-skill">
+                    <h1>.Skill Set</h1>
+                </a></ul>
+            <ul id="select-conts"><a href="#block-conts">
+                    <h1>.Contacts</h1>
+                </a></ul>
+        </section>
+        <section id="side-extra">
+            <section id="side-social-wrapper">
+                <ul><a href="https://github.com/timmup"><img src="resources/icons/github.svg"></a></ul>
+                <ul><a href="https://linkedin.com/in/thryang"><img src="resources/icons/linkedin.svg"></a></ul>
+                <ul><a href="https://instagram.com/tim.mup"><img src="resources/icons/instagram.svg"></a></ul>
             </section>
-            <section id="side-menu">
-                <div id="menu-pointer"></div>
-                <ul id="select-intro"><a href="#top"><h1>.Introduction</h1></a></ul>
-                <ul id="select-exper"><a href="#block-exper"><h1>.Experiences</h1></a></ul>
-                <ul id="select-projs"><a href="#block-projs"><h1>.Projects</h1></a></ul>
-                <ul id="select-skill"><a href="#block-skill"><h1>.Skill Set</h1></a></ul>
-                <ul id="select-conts"><a href="#block-conts"><h1>.Contacts</h1></a></ul>
-            </section>
-            <section id="side-extra">
-                <section id="side-social-wrapper">
-                    <ul><a href="https://github.com/timmup"><img src="resources/icons/github.svg"></a></ul>
-                    <ul><a href="https://linkedin.com/in/thryang"><img src="resources/icons/linkedin.svg"></a></ul>
-                    <ul><a href="https://instagram.com/tim.mup"><img src="resources/icons/instagram.svg"></a></ul>
-                </section>
-                <section id="side-contact-wrapper">
-                    <h1>me@thryang.com</h1>
-                    <h2>@ 2022 Tim Yang, All Rights Reserved </h2>
-                    <h1></h1>
-                </section>
+            <section id="side-contact-wrapper">
+                <h1>me@thryang.com</h1>
+                <h2>@ 2022 Tim Yang, All Rights Reserved </h2>
+                <h1></h1>
             </section>
         </section>
-        <section class="top-nav">
-            <section id="top-graphic">
-                <img src="resources/logo.png">
-            </section>
+    </section>
+    <section class="top-nav">
+        <section id="top-graphic">
+            <img src="resources/logo.png">
         </section>
-        <section class="content" id="top">
-            <section class="line-block"><h1>> Print("Hello There!")</h1></section>
-            <section class="content-block" id="block-intro">
-                <div id="intro-wrapper">
-                    <div class="text-wrapper">
-                        <h2 id="top-subtitle">My name is</h2>
-                        <h1>Tim <span>Y</span>ang</h1>
-                        <h2 id="bottom-subtitle">Welcome to my portfolio<span style="color: var(--accent3)">!</span></h2>
+    </section>
+    <section class="content" id="top">
+        <section class="line-block">
+            <h1>> Print("Hello There!")</h1>
+        </section>
+        <section class="content-block" id="block-intro">
+            <div id="intro-wrapper">
+                <div class="text-wrapper">
+                    <h2 id="top-subtitle">My name is</h2>
+                    <h1>Tim <span>Y</span>ang</h1>
+                    <h2 id="bottom-subtitle">Welcome to my portfolio<span style="color: var(--accent3)">!</span></h2>
                     <div>
-                </div>
-            </section>
-            <section class="line-block" style="text-align: center;"><h1 style="color: var(--accent1)">&#60body&#62</h1></section>
-            <section class="content-block" id="block-exper">
-                <div>
-                    <h1>Experiences.</h1>
-                    <div class="exper-entity-wrapper">
-                        <div class="exper-entity" id="exper-curaml">
-                            <div class="exper-content">
-                                <h2>CuraML Digital Health Research</h2>
-                                <h1>Co-Founder & Software Engineer</h1>
-                                <h3>FullStack Dev · HTML · CSS · JS · Linux · Python</h3>
-                            </div>
-                            <div class="exper-time">
-                                <h4>Jan 2022 - Present</h4>
-                            </div>
-                        </div>
-                        <div class="exper-entity" id="exper-abbott">
-                            <div class="exper-content">
-                                <h2>Abbott Laboratories</h2>
-                                <h1>Business Analyst <span style="color: var(--light2); font-weight: 100;">(Internship)</span></h1>
-                                <h3>Data Analytics · Python · PowerBI · Excel</h3>
-                            </div>
-                            <div class="exper-time">
-                                <h4>Apr 2022 - Aug 2022</h4>
-                            </div>
-                        </div>
-                        <div class="exper-entity" id="exper-huawei">
-                            <div class="exper-content">
-                                <h2>Huawei Technologies</h2>
-                                <h1>Software Engineer <span style="color: var(--light2); font-weight: 100;">(Internship)</span></h1>
-                                <h3>Performance Analysis · Python · Cron · Jenkins · Linux</h3>
-                            </div>
-                            <div class="exper-time">
-                                <h4>Sep 2021 - Dec 2021</h4>
-                            </div>
-                        </div>
                     </div>
-                </div>
-            </section>
-            <section class="content-block" id="block-projs">
-                <div>
-                    <h1>Projects.</h1>
-                    <div id="proj-entity-wrapper">
-                        <div class="proj-entity" id="proj-curaml">
-                            <div class="proj-wrapper">
-                                <div class="proj-img" style="background-image: url(resources/images/curaml_proj.png)"></div>
-                                <div class="proj-desc">
-                                    <h1>CuraML</h1>
-                                    <h2>Digital Healthcare Platform and Diagnosis Tool</h2>
-                                    <h3>Developing</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="proj-entity" id="proj-curaml">
-                            <div class="proj-wrapper">
-                                <div class="proj-img" style="background-image: url(resources/images/personal_proj.png);"></div>
-                                <div class="proj-desc">
-                                    <h1>Portfolio</h1>
-                                    <h2>A little portal from myself to the people out there.</h2>
-                                    <h3>Maintaining</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="proj-entity" id="proj-curaml">
-                            <div class="proj-wrapper">
-                                <div class="proj-img" style="background-image: url(resources/images/creampy_proj.jpg);"></div>
-                                <div class="proj-desc">
-                                    <h1>track.py</h1>
-                                    <h2>Python library to enable personal ML stock tracking and predicting.</h2>
-                                    <h3>Initiating</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="content-block" id="block-skill">
-                <div>
-                    <h1>Skills.</h1>
-                    <div id="skill-entity-wrapper">
-                        <div class="skill-entity">
-                            <div class="skill-title">
-                                <h1>Programming</h1>
-                            </div>
-                            <div class="skill-list">
-                                <h2>Python C/C++ R JS HTML CSS</h2>
-                            </div>
-                        </div>
-                        <div class="skill-entity">
-                            <div class="skill-title">
-                                <h1>Business</h1>
-                            </div>
-                            <div class="skill-list">
-                                <h2>PowerBI Office</h2>
-                            </div>
-                        </div>
-                        <div class="skill-entity">
-                            <div class="skill-title">
-                                <h1>Modules</h1>
-                            </div>
-                            <div class="skill-list">
-                                <h2>NodeJS Pandas</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="content-block" id="block-conts"></section>
-            <section class="line-block" style="text-align: center;"><h1 style="color: var(--accent1)">&#60/body&#62</h1></section>
-            <section class="line-block" style="text-align: right;"><h1>Print("General Kenobi!") &#60</h1></section>
         </section>
-    </body>
-    <div class="colors">
-        <div class="color-block" style="background-color: var(--accent1)"><h1>1</h1></div>
-        <div class="color-block" style="background-color: var(--accent2)"><h1>2</h1></div>
-        <div class="color-block" style="background-color: var(--accent3)"><h1>3</h1></div>
-        <div class="color-block" style="background-color: var(--accent4)"><h1>4</h1></div>
-        <div class="color-block" style="background-color: var(--accent5)"><h1>5</h1></div>
-    </div>
-    <div class="colors" style="top: 50px;">
-        <div class="color-block" style="background-color: var(--dark1)"><h1>1</h1></div>
-        <div class="color-block" style="background-color: var(--dark2)"><h1>2</h1></div>
-        <div class="color-block" style="background-color: var(--dark3)"><h1>2</h1></div>
-        <div class="color-block" style="background-color: var(--light1)"><h1 style="color: black;">1</h1></div>
-        <div class="color-block" style="background-color: var(--light2)"><h1 style="color: black;">2</h1></div>
-    </div>
-    <footer>
-        
-    </footer>
+        <section class="line-block" style="text-align: center;">
+            <h1 style="color: var(--accent1)">&#60body&#62</h1>
+        </section>
+        <section class="content-block" id="block-exper">
+            <div>
+                <h1>Experiences.</h1>
+                <div class="exper-entity-wrapper">
+                    <div class="exper-entity" id="exper-curaml">
+                        <div class="exper-content">
+                            <h2>CuraML Digital Health Research</h2>
+                            <h1>Co-Founder & Software Engineer</h1>
+                            <h3>FullStack Dev · HTML · CSS · JS · Linux · Python</h3>
+                        </div>
+                        <div class="exper-time">
+                            <h4>Jan 2022 - Present</h4>
+                        </div>
+                    </div>
+                    <div class="exper-entity" id="exper-abbott">
+                        <div class="exper-content">
+                            <h2>Abbott Laboratories</h2>
+                            <h1>Business Analyst <span
+                                    style="color: var(--light2); font-weight: 100;">(Internship)</span></h1>
+                            <h3>Data Analytics · Python · PowerBI · Excel</h3>
+                        </div>
+                        <div class="exper-time">
+                            <h4>Apr 2022 - Aug 2022</h4>
+                        </div>
+                    </div>
+                    <div class="exper-entity" id="exper-huawei">
+                        <div class="exper-content">
+                            <h2>Huawei Technologies</h2>
+                            <h1>Software Engineer <span
+                                    style="color: var(--light2); font-weight: 100;">(Internship)</span></h1>
+                            <h3>Performance Analysis · Python · Cron · Jenkins · Linux</h3>
+                        </div>
+                        <div class="exper-time">
+                            <h4>Sep 2021 - Dec 2021</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-block" id="block-projs">
+            <div>
+                <h1>Projects.</h1>
+                <div id="proj-entity-wrapper">
+                    <div class="proj-entity" id="proj-curaml">
+                        <div class="proj-wrapper">
+                            <div class="proj-img" style="background-image: url(resources/images/curaml_proj.png)"></div>
+                            <div class="proj-desc">
+                                <h1>CuraML</h1>
+                                <h2>Digital Healthcare Platform and Diagnosis Tool</h2>
+                                <h3>Developing</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proj-entity" id="proj-curaml">
+                        <div class="proj-wrapper">
+                            <div class="proj-img" style="background-image: url(resources/images/personal_proj.png);">
+                            </div>
+                            <div class="proj-desc">
+                                <h1>Portfolio</h1>
+                                <h2>A little portal from myself to the people out there.</h2>
+                                <h3>Maintaining</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proj-entity" id="proj-curaml">
+                        <div class="proj-wrapper">
+                            <div class="proj-img" style="background-image: url(resources/images/creampy_proj.jpg);">
+                            </div>
+                            <div class="proj-desc">
+                                <h1>track.py</h1>
+                                <h2>Python library to enable personal ML stock tracking and predicting.</h2>
+                                <h3>Initiating</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-block" id="block-skill">
+            <div>
+                <h1>Skills.</h1>
+                <div id="skill-entity-wrapper">
+                    <div class="skill-entity">
+                        <div class="skill-title">
+                            <h1>Programming</h1>
+                        </div>
+                        <div class="skill-list">
+                            <h2>Python C/C++ R JS HTML CSS</h2>
+                        </div>
+                    </div>
+                    <div class="skill-entity">
+                        <div class="skill-title">
+                            <h1>Business</h1>
+                        </div>
+                        <div class="skill-list">
+                            <h2>PowerBI Office</h2>
+                        </div>
+                    </div>
+                    <div class="skill-entity">
+                        <div class="skill-title">
+                            <h1>Modules</h1>
+                        </div>
+                        <div class="skill-list">
+                            <h2>NodeJS Pandas</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-block" id="block-conts">
+            <form id="contact-form" action="https://formspree.io/f/xgeqvpwv" method="POST">
+                <label>
+                    Your email:
+                    <input type="email" name="email">
+                </label>
+                <label>
+                    Your message:
+                    <textarea name="message"></textarea>
+                </label>
+                <!-- your other form fields go here -->
+                <button type="submit">Send</button>
+            </form>
+        </section>
+        <section class="line-block" style="text-align: center;">
+            <h1 style="color: var(--accent1)">&#60/body&#62</h1>
+        </section>
+        <section class="line-block" style="text-align: right;">
+            <h1>Print("General Kenobi!") &#60</h1>
+        </section>
+    </section>
+    <div id="contact-img"></div>
+</body>
+<footer>
+
+</footer>
+
 </html>

@@ -38,6 +38,7 @@ h3 {
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
+    z-index: 10;
 }
 
 #side-graphic {
@@ -81,10 +82,6 @@ h3 {
     padding: .5rem 0;
     margin: 0;
     color: var(--light1);
-}
-
-#side-menu {
-
 }
 
 #menu-pointer {
@@ -210,7 +207,7 @@ h3 {
 
 .content-block {
     margin: auto;
-    margin: 10rem auto;
+    margin: 2rem auto;
     width: calc(100% - 10rem);
     height: fit-content;
     overflow: hidden;
@@ -390,6 +387,10 @@ h3 {
     color: var(--accent3) !important;
 }
 
+.contact-block-inview {
+    opacity: 1 !important;
+}
+
 #proj-entity-wrapper {
     display: flex;
     flex-direction: row;
@@ -489,7 +490,7 @@ h3 {
     flex-wrap: wrap;
     width: calc(100% - 19rem);
     height: fit-content;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 2rem 5rem 2rem 10rem;
     padding: 1rem;
 }
@@ -520,35 +521,29 @@ h3 {
 }
 
 #block-conts {
-    background-color: var(--dark3)
+    background-color: var(--dark3);
+    min-height: calc(100vh - 20rem);
+    height: fit-content;
+    margin-top: 10rem;
+    
 }
 
-
-.colors {
-    width: 250px;
-    height: 50px;
-    position: absolute;
-    display: flex;
-    background-color: rgba(255, 255, 255, 0.1);
+#contact-form {
     display: none;
 }
 
-.colors > .color-block > h1 {
-    margin: 0;
-    font-size: 16px;
-    color: white;
+#contact-img {
+    width: 100%;
+    height: 100%;
+    background-image: url(resources/images/contact-bkg.png);
+    background-size: cover;
+    position: fixed;
+    opacity: 0;
+    transition: opacity .5s ease;
 }
 
-.color-block {
-    margin: 10px;
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
+#ms-form span {
+    font-family: 'Outfit', serif !important;
 }
 
 @media(max-width: 1600px) {
@@ -607,8 +602,8 @@ h3 {
     }
 
     .content-block > div > h1 {
-        font-weight: 200;
-        font-size: 8rem;
+        font-weight: 400;
+        font-size: 9rem;
         margin-bottom: 5rem;
         overflow: hidden;
         white-space: nowrap;
@@ -652,14 +647,13 @@ h3 {
         margin: 0;
         padding: 0;
         width: 100%;
-        gap: 8rem;
+        gap: 2rem;
     }
 
     .proj-entity {
         width: 100%;
         text-align: left;
         padding-bottom: 2rem;
-        border-bottom: .5rem dashed var(--light2);
     }
 
     .proj-desc {
@@ -667,12 +661,13 @@ h3 {
     }
 
     .proj-desc > h1 {
-        font-size: 8rem;
+        font-size: 6rem;
+        margin-bottom: .2rem;
         font-weight: 400;
     }
 
     .proj-desc > h2 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     .proj-desc > h3 {

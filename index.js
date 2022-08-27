@@ -23,7 +23,7 @@ $(document).ready(function () {
         duration: $( '#block-exper' ).height(),
     }) 
     .setClassToggle('#block-exper > div > h1', 'content-block-inview')
-    .addIndicators() // remove this before publishing
+    //.addIndicators() // remove this before publishing
     .addTo(SMControl);
 
     // Scroll Magic Reveal Projects:
@@ -32,7 +32,7 @@ $(document).ready(function () {
         duration: $( '#block-projs' ).height(),
     }) 
     .setClassToggle('#block-projs > div > h1', 'content-block-inview')
-    .addIndicators() // remove this before publishing
+    //.addIndicators() // remove this before publishing
     .addTo(SMControl);
 
     // Scroll Magic Reveal Projects:
@@ -41,7 +41,16 @@ $(document).ready(function () {
         duration: $( '#block-skill' ).height(),
     }) 
     .setClassToggle('#block-skill > div > h1', 'content-block-inview')
-    .addIndicators() // remove this before publishing
+    //.addIndicators() // remove this before publishing
+    .addTo(SMControl);
+    
+    // Scroll Magic Reveal Projects:
+    var projsSM = new ScrollMagic.Scene({
+        triggerElement: '#block-conts',
+        duration: $( '#block-conts' ).height(),
+    }) 
+    .setClassToggle('#contact-img', 'contact-block-inview')
+    //.addIndicators() // remove this before publishing
     .addTo(SMControl);
 
     // Side Menu Dot Animations:
