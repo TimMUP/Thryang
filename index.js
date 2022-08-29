@@ -12,44 +12,20 @@ $(document).ready(function () {
 
     // Scroll Reveal Section:
     ScrollReveal().reveal('.exper-entity', { distance: '3rem', origin: 'right', delay: 100, duration: 1000, interval: 50 });
-    ScrollReveal().reveal('.proj-entity', { distance: '3rem', origin: 'bottom', delay: 100, duration: 1000, interval: 50 });
+    ScrollReveal().reveal('.proj-entity', { distance: '3rem', origin: 'right', delay: 100, duration: 1000, interval: 50 });
     ScrollReveal().reveal('#top-subtitle', { distance: '2rem', origin: 'left', delay: 100, duration: 1000, interval: 50 });
+    ScrollReveal().reveal('.skill-entity', { distance: '3rem', origin: 'right', delay: 100, duration: 1000, interval: 50 });
     ScrollReveal().reveal('#bottom-subtitle', { distance: '2rem', origin: 'right', delay: 50, duration: 1250, interval: 50 });
 
     // Scroll Magic Reveal Experiences:
     var SMControl = new ScrollMagic.Controller()
-    var experSM = new ScrollMagic.Scene({
-        triggerElement: '#block-exper',
-        duration: $( '#block-exper' ).height(),
-    }) 
-    .setClassToggle('#block-exper > div > h1', 'content-block-inview')
-    //.addIndicators() // remove this before publishing
-    .addTo(SMControl);
-
-    // Scroll Magic Reveal Projects:
-    var projsSM = new ScrollMagic.Scene({
-        triggerElement: '#block-projs',
-        duration: $( '#block-projs' ).height(),
-    }) 
-    .setClassToggle('#block-projs > div > h1', 'content-block-inview')
-    //.addIndicators() // remove this before publishing
-    .addTo(SMControl);
-
-    // Scroll Magic Reveal Projects:
-    var projsSM = new ScrollMagic.Scene({
-        triggerElement: '#block-skill',
-        duration: $( '#block-skill' ).height(),
-    }) 
-    .setClassToggle('#block-skill > div > h1', 'content-block-inview')
-    //.addIndicators() // remove this before publishing
-    .addTo(SMControl);
     
     // Scroll Magic Reveal Projects:
     var projsSM = new ScrollMagic.Scene({
         triggerElement: '#block-conts',
         duration: $( '#block-conts' ).height(),
     }) 
-    .setClassToggle('#contact-img', 'contact-block-inview')
+    .setClassToggle('#block-conts', 'contact-block-inview')
     //.addIndicators() // remove this before publishing
     .addTo(SMControl);
 
