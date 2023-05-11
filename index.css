@@ -354,6 +354,7 @@ h3 {
     flex-direction: column;
     position: relative;
     padding-right: 2rem;
+    min-width: fit-content;
 }
 
 .exper-time::before {
@@ -368,6 +369,12 @@ h3 {
     position: absolute;
     opacity: 0.05;
 }
+
+
+#exper-teledyne > .exper-time::before {
+    background-image: url(resources/logos/teledyne.svg);
+}
+
 
 #exper-curaml > .exper-time::before {
     background-image: url(resources/logos/curaml.svg);
