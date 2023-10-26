@@ -42,6 +42,8 @@ $(document).ready(function () {
     var contsTopPos = $('#block-conts').offset().top - convertRemToPixels(1)
     const pointerTopVar = convertRemToPixels(1.2);
     const pointerRigVar = convertRemToPixels(2);
+
+    
     $("#menu-pointer").css({ 'display': 'block', 'left': `${introButton.right - pointerRigVar}px`, 'top': `${introButton.top + pointerTopVar}px` })
     function aniPointer(pos, clicked) {
         disableScrollSense = clicked;
