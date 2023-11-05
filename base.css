@@ -1,0 +1,277 @@
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+body {
+    display: block;
+    width: 100%;
+    margin: 0;
+    background-color: var(--shade2);
+    overflow-y: auto;
+    transition: background-color 1s ease;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+.side-nav {
+    position: fixed;
+    display: flex;
+    width: 12rem;
+    background-color: var(--shade1);
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    z-index: 10;
+}
+
+#side-graphic {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+#side-graphic > a {
+    background-color: var(--accent2);
+}
+
+#side-graphic > a:hover {
+    background-color: var(--accent1);
+}
+
+#graphic-wrapper {
+    display: flex;
+    background-color: inherit;
+    padding-left: .6rem;
+    width: calc(100% - .6rem);
+    height: 4rem;
+    transition: background-color .5s ease;
+}
+
+#graphic-wrapper > img{
+    background: transparent !important;
+    margin: auto 0;
+    height: 3rem;
+    width: 3rem;
+}
+
+#profession-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-left: .9rem;
+    padding-top: 1rem;
+}
+
+#profession-wrapper > h1 {
+    font-family: 'Outfit', serif;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: .1rem;
+    padding: .5rem 0;
+    margin: 0;
+    color: var(--shade6);
+}
+
+#menu-pointer {
+    position: absolute;
+    height: .4rem;
+    width: .4rem;
+    border-radius: 0.2rem;
+    background-color: var(--accent2);
+    padding: 0;
+    margin: 0;
+    display: none;
+    z-index: 1;
+    pointer-events: none;
+}
+
+#side-menu > ul {
+    color: var(--shade5);
+    margin: 0;
+    padding: 1rem 1rem;
+    transition: color 1s ease;
+    z-index: 2;
+}
+
+#side-menu > ul > a > h1 {
+    font-family: 'Outfit', serif;
+    font-weight: 200;
+    font-size: .9rem;
+    line-height: 1rem;
+    cursor: pointer;
+    color: var(--shade5);
+    transition: color .5s ease;
+}
+
+#side-menu > ul > a > h1:hover {
+    cursor: pointer;
+    color: var(--shade6);
+}
+
+#side-extra {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+}
+
+#side-social-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+}
+
+#side-social-wrapper > ul {
+    padding: 0 0 1rem 1rem;
+    margin: 0;
+    width: 1.5rem;
+}
+
+#side-social-wrapper > ul > a {
+    opacity: 0.1;
+    transition: opacity .5s ease;
+}
+
+#side-social-wrapper > ul :hover {
+    cursor: pointer;
+    fill: white;
+    opacity: 1;
+}
+
+#side-contact-wrapper {
+    border-top: 1px dashed var(--shade5);
+    margin: 0 1rem 1rem 1rem;
+    width: calc(100% - 2rem);
+    padding-top: 1rem;
+}
+
+#side-contact-wrapper h1 {
+    font-family: 'Outfit', serif;
+    font-weight: 100;
+    font-size: 1rem;
+    color: var(--shade6)
+}
+
+#side-contact-wrapper h2 {
+    font-family: 'Outfit', serif;
+    font-weight: 100;
+    font-size: .5rem;
+    color: var(--shade6);
+    width: 100%;
+}
+
+.top-nav {
+    display: none;
+    position: fixed;
+    padding: 1rem;
+    width: calc(100% - 2rem);
+    height: 8.2rem;
+    background-color: rgba(13, 105, 115, 0.4);
+    z-index: 10;
+    justify-content: right;
+}
+
+#top-graphic {
+    margin-right: 1rem;
+}
+
+#top-graphic > img {
+    height: 8.2rem;
+}
+
+.content {
+    top: 0;
+    width: calc(100% - 12rem);
+    height: 100%;
+    position: absolute;
+    margin-left: 12rem;
+}
+
+.content-block {
+    display: flex;
+    margin: auto;
+    margin: 2rem auto;
+    width: calc(100% - 10rem);
+    height: fit-content;
+    overflow: hidden;
+}
+
+.content-block > div {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+}
+
+.line-block {
+    background-color: var(--shade2);
+    width: calc(100% - 3rem);
+    padding: 1.5rem;
+    height: fit-content;
+    color: var(--shade5);
+    z-index: 11;
+}
+
+.line-block > h1 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 1rem;
+    margin: 0;
+    z-index: 11;
+    color: var(--accent1);
+}
+
+@media(max-width: 1600px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 1000px) {
+    html {
+        font-size: 16px;
+    }
+    
+    .side-nav {
+        display: none;
+    }
+
+    .top-nav {
+        display: flex;
+    }
+
+    .content {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .line-block {
+        width: calc(100% - 8rem);
+        padding: 4rem;
+    }
+
+    .line-block > h1 {
+        font-size: 2.2rem;
+    }
+}
