@@ -129,6 +129,9 @@
     opacity: 0.05;
 }
 
+#exper-hoopp > .exper-time::before {
+    background-image: url(resources/logos/hoopp.svg);
+}
 
 #exper-teledyne > .exper-time::before {
     background-image: url(resources/logos/teledyne.svg);
